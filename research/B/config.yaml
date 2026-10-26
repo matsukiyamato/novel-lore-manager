@@ -1,0 +1,66 @@
+# 自作ワークフロー定義。Codexの公式自動実行スキーマではない。
+version: 1
+workflow:
+  id: B
+  name: needs-first-web-novel-research
+  language: ja
+  status: draft_for_human_approval
+  branch: research/lore-b_ver1.0
+
+rules:
+  existing_feature_inventory: forbidden
+  compare_with_A_or_C: false
+  write_scope: research/B/outputs/
+  modifying_source_code: false
+  git_mutations: false
+  require_evidence_ids: true
+  require_human_approval_for_product_decisions: true
+  research_report_language: ja
+  analysis_report_language: ja
+  final_report_language: ja
+  readable_for_beginners: true
+  unsupported_claim: mark_unverified
+
+inputs:
+  required:
+    - research/B/inputs/product-constraints.md
+    - research/B/inputs/developer-observation.md
+    - research/B/inputs/source-list.md
+    - research/B/questions.md
+  forbidden:
+    - docs/product/feature-inventory.md
+    - research/A/
+    - research/C/
+
+steps:
+  - id: preflight
+    roles: [00-workflow-manager]
+    outputs: [00-execution/run-log.md, 00-execution/input-manifest.md]
+  - id: collect
+    roles: [02-market-researcher, 03-ux-researcher, 04-web-novel-author, 06-competitor-analyst, 10-legal-ip-reviewer]
+    outputs: [01-research/market.md, 01-research/author-behavior.md, 01-research/author-editor.md, 01-research/competitors.md, 01-research/regulations.md]
+  - id: audit
+    roles: [11-evidence-auditor]
+    outputs: [02-evidence/evidence-register.yaml, 02-evidence/audit-report.md, 02-evidence/missing-evidence.md]
+  - id: analyze
+    roles: [01-it-consultant, 03-ux-researcher, 08-technical-reviewer]
+    outputs: [03-analysis/user-problems.md, 03-analysis/causes-and-workarounds.md, 03-analysis/unmet-needs.md, 03-analysis/solution-options.md, 03-analysis/technical-feasibility.md]
+  - id: review
+    roles: [04-web-novel-author, 05-web-novel-editor, 07-ui-ux-designer, 09-security-reviewer, 10-legal-ip-reviewer, 12-skeptic]
+    outputs: [04-reviews/author-editor-review.md, 04-reviews/ui-ux-review.md, 04-reviews/security-review.md, 04-reviews/legal-review.md, 04-reviews/skeptic-review.md, 04-reviews/dissent-register.yaml]
+  - id: synthesize
+    roles: [13-pdm]
+    outputs: [05-pdm/recommendation.md]
+  - id: report
+    roles: [13-pdm, 11-evidence-auditor]
+    outputs: [06-final-report/README.md, 06-final-report/01-overview.md, 06-final-report/02-user-problems.md, 06-final-report/03-existing-solutions.md, 06-final-report/04-feature-proposals.md, 06-final-report/05-risks-and-unknowns.md, 06-final-report/06-decisions-needed.md]
+  - id: handover
+    roles: [00-workflow-manager]
+    outputs: [07-handover/findings-summary.md, 07-handover/freeze-manifest.md]
+
+stop_conditions:
+  - missing_required_input
+  - wrong_git_branch
+  - unable_to_validate_official_ai_policies
+  - evidence_for_critical_claim_unavailable
+  - unauthorized_file_write_needed
