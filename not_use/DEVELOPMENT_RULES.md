@@ -1228,3 +1228,5 @@ Novel Lore Managerでは、
   Status           Draft
   Target           Human Developer
   AI/Codex Rules   Not included
+
+
