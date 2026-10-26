@@ -1,0 +1,1019 @@
+{
+  "version": 1,
+  "run_id": "B-20261025-01",
+  "status": "audited_with_limitations",
+  "accessed_date": "2026-10-25",
+  "scope_exception": "公式規約検証不能に限り未確認を明示した限定調査をユーザーが承認。安全遮断の迂回は行わない。",
+  "evidence": [
+    {
+      "id": "EV-B-0001",
+      "source_title": "AI利用状況に関して",
+      "source_url": "https://syosetu.com/site/ai/",
+      "publisher_or_author": "小説家になろう",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0001",
+        "CL-B-0041",
+        "CL-B-0043"
+      ],
+      "short_summary_ja": "区分設定の必須と4区分、本文利用と補助用途を区別。",
+      "limitation": "確認時点の原文。個別作品の判定・他の公募の参加資格は未確認。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0002",
+      "source_title": "小説投稿ガイドライン",
+      "source_url": "https://kakuyomu.jp/legal/guideline",
+      "publisher_or_author": "カクヨム",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0042",
+        "CL-B-0043"
+      ],
+      "short_summary_ja": "一般投稿でAI3タグの推奨。",
+      "limitation": "後続findで本文89〜102行を確認。公募の個別要項と別。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0003",
+      "source_title": "小説投稿ガイドラインを一部変更しました",
+      "source_url": "https://kakuyomu.jp/info/entry/gen_ai_guideline",
+      "publisher_or_author": "カクヨム",
+      "published_date": "2026-05-27",
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [],
+      "short_summary_ja": "改定告知の題名と日付を取得。",
+      "limitation": "今回の本文精査の根拠はEV-B-0002。題名取得を区分の証拠に使わない。",
+      "verification_status": "partially_verified"
+    },
+    {
+      "id": "EV-B-0004",
+      "source_title": "作品投稿に生成AIを利用している方へ、推奨タグ利用のお願い",
+      "source_url": "https://kakuyomu.jp/info/entry/geneai_tag",
+      "publisher_or_author": "カクヨム",
+      "published_date": "2025-11-19",
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0002",
+        "CL-B-0003",
+        "CL-B-0043"
+      ],
+      "short_summary_ja": "一般の推奨とコンテスト11・同短編のタグ要求を区別。",
+      "limitation": "当該コンテストの範囲。EV-B-0002/0003と同じ運営で独立標本でない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0005",
+      "source_title": "投稿ガイドライン（リンク名・本文未取得）",
+      "source_url": "https://www.alphapolis.co.jp/guidelines",
+      "publisher_or_author": "アルファポリス（リンク先ドメイン）",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "EV-B-0008のリンクから発見。内容の主張なし。",
+      "supported_claim_ids": [
+        "CL-B-0004"
+      ],
+      "short_summary_ja": "本文を取得できない。",
+      "limitation": "Web失敗、ブラウザのサイト安全ポリシーで遮断。以後迂回しない。",
+      "verification_status": "inaccessible"
+    },
+    {
+      "id": "EV-B-0006",
+      "source_title": "利用規約（リンク名・本文未取得）",
+      "source_url": "https://www.alphapolis.co.jp/pages/terms_of_service",
+      "publisher_or_author": "アルファポリス（リンク先ドメイン）",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "EV-B-0008のリンクから発見。遮断前にWebで試行。",
+      "supported_claim_ids": [
+        "CL-B-0004"
+      ],
+      "short_summary_ja": "本文を取得できない。",
+      "limitation": "Web取得失敗。現行内容を推定しない。",
+      "verification_status": "inaccessible"
+    },
+    {
+      "id": "EV-B-0007",
+      "source_title": "AI関連お知らせ候補（本文未取得）",
+      "source_url": "https://www.alphapolis.co.jp/topic/important/25",
+      "publisher_or_author": "アルファポリス（リンク先ドメイン）",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "EV-B-0009本文のURLから発見。遮断前にWebで試行。",
+      "supported_claim_ids": [
+        "CL-B-0004"
+      ],
+      "short_summary_ja": "本文を取得できない。",
+      "limitation": "解説の内容・公開日を公式確認に代用しない。",
+      "verification_status": "inaccessible"
+    },
+    {
+      "id": "EV-B-0008",
+      "source_title": "AI生成物の販売・投稿規約一覧",
+      "source_url": "https://aiteller.jp/data/ai-platform-rules-timeline",
+      "publisher_or_author": "AI teller",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "secondary_article",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [],
+      "short_summary_ja": "公式リンク発見用。",
+      "limitation": "当該記事の法務判定を採用しない。",
+      "verification_status": "partially_verified"
+    },
+    {
+      "id": "EV-B-0009",
+      "source_title": "小説投稿サイトのAI利用規約まとめ【2026年版】",
+      "source_url": "https://note.com/textfall_app/n/n203365e4be18",
+      "publisher_or_author": "Textfall運営事務局",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "secondary_article",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [],
+      "short_summary_ja": "公式お知らせURL発見用。",
+      "limitation": "現行規約の一次証拠にしない。",
+      "verification_status": "partially_verified"
+    },
+    {
+      "id": "EV-B-0010",
+      "source_title": "AI生成作品でのコンテスト参加・書籍化打診を禁止",
+      "source_url": "https://www.itmedia.co.jp/aiplus/article/2511/18/1251118106/",
+      "publisher_or_author": "ITmedia",
+      "published_date": "2025-11-18",
+      "accessed_date": "2026-10-25",
+      "source_type": "secondary_article",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [],
+      "short_summary_ja": "過去の方針変更を報道。",
+      "limitation": "現行公式本文の代用にしない。同一発表の再引用を独立証拠に数えない。",
+      "verification_status": "partially_verified"
+    },
+    {
+      "id": "EV-B-0011",
+      "source_title": "Bへの共通製品条件",
+      "source_url": "research/B/inputs/product-constraints.md",
+      "publisher_or_author": "ユーザー提供",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "developer_self_observation",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0005",
+        "CL-B-0040"
+      ],
+      "short_summary_ja": "Windows 11主対象、SQLite、ローカルmd/txt、本文執筆対象外。",
+      "limitation": "需要証拠でなく与えられた制約。公開URLなし。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0012",
+      "source_title": "開発者1名の自己観察",
+      "source_url": "research/B/inputs/developer-observation.md",
+      "publisher_or_author": "開発者1名",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "developer_self_observation",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0006",
+        "CL-B-0036",
+        "CL-B-0040"
+      ],
+      "short_summary_ja": "OBS-B-01〜10の分散、旧版、再開、削除等の自己申告。",
+      "limitation": "原回答でなく中立化要約、代表性なし。公開URLなし。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0013",
+      "source_title": "集中しやすい執筆・作業環境の作り方",
+      "source_url": "https://enomotomethod.jp/column/environment/",
+      "publisher_or_author": "榎本メソッド",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "published_survey",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0007"
+      ],
+      "short_summary_ja": "事務所関係者21名の執筆環境調査。",
+      "limitation": "便宜的標本。サイト作者全体・Windows設定管理率でない。調査票・回収率未確認。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0014",
+      "source_title": "ObsidianとNotebookLMで作る僕の司書",
+      "source_url": "https://note.com/tempp/n/n427ab4ea2324",
+      "publisher_or_author": "Tempp/久世余白",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "first_person_account",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0008",
+        "CL-B-0037"
+      ],
+      "short_summary_ja": "短編の属性記録と人物リンクの本人例。",
+      "limitation": "本文や画像の作品内容を再掲載しない。AI併用者の個別例、平均的な使い方でない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0015",
+      "source_title": "ObsidianとLongFormで小説を書く",
+      "source_url": "https://zenn.dev/misari/articles/331eb9995e2e8b",
+      "publisher_or_author": "misari",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "first_person_account",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0009",
+        "CL-B-0037"
+      ],
+      "short_summary_ja": "作品別の整理と追加拡張を説明する本人運用。",
+      "limitation": "使い方記事の本人例と手順を区別。Longformは標準でない。日本語創作全体を代表しない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0016",
+      "source_title": "昨日決めた結末を、今日のChatGPTは知らない",
+      "source_url": "https://note.com/toujinovel/n/nd9c14758be85",
+      "publisher_or_author": "寒海 氷下魚（取得時表示）",
+      "published_date": "2026-09-11",
+      "accessed_date": "2026-10-25",
+      "source_type": "first_person_account",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0010",
+        "CL-B-0036",
+        "CL-B-0040"
+      ],
+      "short_summary_ja": "長編改稿時に決定・提案・廃止が混在し再開時に困ったと報告。",
+      "limitation": "自己申告で改善・時間は実測でない。検索時の著者表示との差は取得本文表示を優先。AI併用事例を非AI層へ一般化不可。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0017",
+      "source_title": "自分の作品を分析しつつ、小説の書き方について考察するメモ：2.キャラをどうやって考えるか",
+      "source_url": "https://ncode.syosetu.com/n8472gh/3/",
+      "publisher_or_author": "当該創作論の投稿者（筆名未照合）",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "first_person_account",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0011"
+      ],
+      "short_summary_ja": "設定用のOneNoteとExcel年表を使う本人例。",
+      "limitation": "昔の利用例。現在の製品機能・権利処理の裏付けでない。本文全体の創作例は収集対象外。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0018",
+      "source_title": "第22話への応援コメント",
+      "source_url": "https://kakuyomu.jp/works/16817330667799284350/episodes/16817330668628691860/comments",
+      "publisher_or_author": "蒼井星空ほか",
+      "published_date": "2024-09-18",
+      "accessed_date": "2026-10-25",
+      "source_type": "first_person_account",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0012",
+        "CL-B-0036"
+      ],
+      "short_summary_ja": "複数アプリへ書いて混乱する例、スマホ/PCの利用例。",
+      "limitation": "自発投稿の偏り。本文執筆と設定管理を同一視しない。返信を独立標本に数えない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0019",
+      "source_title": "ツールによって文章が変わる？",
+      "source_url": "https://kakuyomu.jp/users/sizmoon/news/16817139557734708154",
+      "publisher_or_author": "雉山いると",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "first_person_account",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0013"
+      ],
+      "short_summary_ja": "スマホを主としてPCとも併用する本人の経験・見解。",
+      "limitation": "本人の割合は市場割合でない。設定管理の端末を確定しない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0020",
+      "source_title": "読書と小説の執筆に関するアンケートへご協力ください",
+      "source_url": "https://kakuyomu.jp/info/entry/2610_enq",
+      "publisher_or_author": "カクヨム",
+      "published_date": "2026-10-08",
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0014"
+      ],
+      "short_summary_ja": "2026-10-08のアンケート募集告知。",
+      "limitation": "結果でない。フォーム回答・個人情報収集はしない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0021",
+      "source_title": "Nola公式noteの紹介／製品ページ取得状況",
+      "source_url": "https://note.com/nolanovel/all",
+      "publisher_or_author": "Nola公式アカウント",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0015"
+      ],
+      "short_summary_ja": "公式紹介文に人物・プロット管理を記載。",
+      "limitation": "https://nola-novel.com/agent は本文取得制限。紹介文の確認だけで現行全仕様・価格を確定しない。",
+      "verification_status": "partially_verified"
+    },
+    {
+      "id": "EV-B-0022",
+      "source_title": "How Obsidian stores data",
+      "source_url": "https://obsidian.md/help/Files+and+folders/How+Obsidian+stores+data",
+      "publisher_or_author": "Obsidian",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0016",
+        "CL-B-0038",
+        "CL-B-0040"
+      ],
+      "short_summary_ja": "ローカルMarkdown、外部編集反映、保管庫。",
+      "limitation": "競合実機の競合解決・速度を計測していない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0023",
+      "source_title": "Search",
+      "source_url": "https://obsidian.md/help/plugins/search",
+      "publisher_or_author": "Obsidian",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0017",
+        "CL-B-0038",
+        "CL-B-0040"
+      ],
+      "short_summary_ja": "コア機能で検索と絞り込み。",
+      "limitation": "別名・読みの品質と探索時間を実証しない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0024",
+      "source_title": "File recovery",
+      "source_url": "https://obsidian.md/help/Plugins/File+recovery",
+      "publisher_or_author": "Obsidian",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0018"
+      ],
+      "short_summary_ja": "保持設定付きの復旧用コピー、完全なバックアップとは別。",
+      "limitation": "保持対象・期間による制限。全消失に対する保証でない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0025",
+      "source_title": "Use pages offline",
+      "source_url": "https://www.notion.com/help/use-pages-offline",
+      "publisher_or_author": "Notion",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0019"
+      ],
+      "short_summary_ja": "アプリでオフライン利用可、個別取得やDBの取得範囲に制限。",
+      "limitation": "完全ローカル専用を意味しない。版・条件の継続確認が必要。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0026",
+      "source_title": "Search for pages & content",
+      "source_url": "https://www.notion.com/help/search",
+      "publisher_or_author": "Notion",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0020",
+        "CL-B-0038"
+      ],
+      "short_summary_ja": "通常検索とAIによる検索を分けて説明。",
+      "limitation": "通常検索のためにAIが必須とはしない。プラン費用・実測未確認。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0027",
+      "source_title": "Export your content",
+      "source_url": "https://www.notion.com/help/export-your-content",
+      "publisher_or_author": "Notion",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0021"
+      ],
+      "short_summary_ja": "Markdown/CSV等の書出し方法を説明。",
+      "limitation": "リンク・構造の完全往復や移行工数は未測定。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0028",
+      "source_title": "Search notes in OneNote",
+      "source_url": "https://support.microsoft.com/en-au/onenote/onenote-help-and-learning/search-notes-in-onenote",
+      "publisher_or_author": "Microsoft",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0022",
+        "CL-B-0038"
+      ],
+      "short_summary_ja": "Windowsデスクトップ版のノート横断検索。",
+      "limitation": "Web版や旧Windows 10アプリに混同しない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0029",
+      "source_title": "Restore notes from a backup",
+      "source_url": "https://support.microsoft.com/en-us/onenote/restore-notes-from-a-backup",
+      "publisher_or_author": "Microsoft",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0023"
+      ],
+      "short_summary_ja": "バックアップがあれば復元可能。",
+      "limitation": "事前の自動/手動バックアップが必要。常に保存されていると仮定しない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0030",
+      "source_title": "grepの実行",
+      "source_url": "https://help.maruo.co.jp/hidemaru/html/190_CmdSearch_Grep.html",
+      "publisher_or_author": "サイトー企画",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0024",
+        "CL-B-0038"
+      ],
+      "short_summary_ja": "複数ファイルの検索と該当行移動。",
+      "limitation": "取得時Ver9.59表記。操作数・探索成功率は未実測。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0031",
+      "source_title": "Basic editing（取得失敗）",
+      "source_url": "https://code.visualstudio.com/docs/editing/codebasics",
+      "publisher_or_author": "Microsoft",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [],
+      "short_summary_ja": "検索で発見したが本文openはエラー・タイムアウト。",
+      "limitation": "検索スニペットのみで確定しない。検索存在の根拠はEV-B-0032を用いる。",
+      "verification_status": "inaccessible"
+    },
+    {
+      "id": "EV-B-0032",
+      "source_title": "User interface",
+      "source_url": "https://code.visualstudio.com/docs/editing/getting-started/userinterface",
+      "publisher_or_author": "Microsoft",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0025",
+        "CL-B-0026",
+        "CL-B-0038"
+      ],
+      "short_summary_ja": "フォルダ検索と標準ローカル履歴・復元、保持制限を説明。",
+      "limitation": "同じページを検索と履歴の独立証拠2件に数えない。実機未計測。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0033",
+      "source_title": "SQLite FTS5 Extension",
+      "source_url": "https://sqlite.org/fts5.html",
+      "publisher_or_author": "SQLite",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0027"
+      ],
+      "short_summary_ja": "trigram部分一致と3文字未満の全文検索制約。",
+      "limitation": "日本語の読み・別名を自動解決しない。外部contentの整合管理も要する。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0034",
+      "source_title": "SQLite Backup API",
+      "source_url": "https://www.sqlite.org/backup.html",
+      "publisher_or_author": "SQLite",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0028"
+      ],
+      "short_summary_ja": "稼働DBのコピーを作るAPI。",
+      "limitation": "外部添付と一緒の一貫バックアップを自動保証しない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0035",
+      "source_title": "Atomic Commit In SQLite",
+      "source_url": "https://www.sqlite.org/atomiccommit.html",
+      "publisher_or_author": "SQLite",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0029"
+      ],
+      "short_summary_ja": "DBトランザクションを全部成功/全取消と見せる仕組みと前提。",
+      "limitation": "任意の外部md/txtと同じトランザクションになるとは言えない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0036",
+      "source_title": "Cross Site Scripting",
+      "source_url": "https://community.owasp.org/attacks/xss/",
+      "publisher_or_author": "OWASP",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0030"
+      ],
+      "short_summary_ja": "未信頼データを検証せず表示すると攻撃面になりうる。",
+      "limitation": "Web一般原理。対象アプリに既存脆弱性があるという診断でない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0037",
+      "source_title": "LLM01:2025 Prompt Injection",
+      "source_url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "publisher_or_author": "OWASP",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0031"
+      ],
+      "short_summary_ja": "外部ファイル由来の命令混同、RAGでも十分に解消しないリスク。",
+      "limitation": "ローカル製品への適用は設計上の解釈。モデル精度評価でない。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0038",
+      "source_title": "llama.cpp README",
+      "source_url": "https://github.com/ggml-org/llama.cpp",
+      "publisher_or_author": "ggml-org",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0032"
+      ],
+      "short_summary_ja": "CPU/GPU・量子化などの実行経路を説明。",
+      "limitation": "本製品の性能、採用モデル、日本語品質、配布権を確認したことにはならない。インストール未実施。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0039",
+      "source_title": "Sign an MSIX package",
+      "source_url": "https://learn.microsoft.com/en-us/windows/msix/package/signing-package-overview",
+      "publisher_or_author": "Microsoft",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_product",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0033"
+      ],
+      "short_summary_ja": "MSIX選択時は署名と端末側の信頼が必要。",
+      "limitation": "配布方式未選定。他方式にそのまま適用しない。価格・地域資格は未確認。",
+      "verification_status": "verified"
+    },
+    {
+      "id": "EV-B-0040",
+      "source_title": "AIと著作権について",
+      "source_url": "https://www.bunka.go.jp/seisaku/chosakuken/aiandcopyright.html",
+      "publisher_or_author": "文化庁",
+      "published_date": null,
+      "accessed_date": "2026-10-25",
+      "source_type": "official_policy",
+      "method_or_sample": "公開本文をopen/findで確認。仕様や本人の報告の範囲に限定。",
+      "supported_claim_ids": [
+        "CL-B-0034"
+      ],
+      "short_summary_ja": "当事者向け資料・考え方・ガイダンスの案内。",
+      "limitation": "今回は案内ページの存在だけ。リンク先全文と個別法解釈を確認したとはしない。",
+      "verification_status": "verified"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CL-B-0001",
+      "category_ja": "確認済みの事実",
+      "text_ja": "なろうの取得原文はAI利用状況の設定を必須としている。",
+      "evidence_ids": [
+        "EV-B-0001"
+      ]
+    },
+    {
+      "id": "CL-B-0002",
+      "category_ja": "確認済みの事実",
+      "text_ja": "カクヨム2025-11-19告知は一般推奨とコンテスト11/同短編のタグ要求を分ける。",
+      "evidence_ids": [
+        "EV-B-0004"
+      ]
+    },
+    {
+      "id": "CL-B-0003",
+      "category_ja": "分析・仮説",
+      "text_ja": "一般投稿と個別公募の条件は別に確認する必要がある。",
+      "evidence_ids": [
+        "EV-B-0004"
+      ]
+    },
+    {
+      "id": "CL-B-0004",
+      "category_ja": "未確認",
+      "text_ja": "アルファポリスの現行公式AI方針を今回検証できない。",
+      "evidence_ids": [
+        "EV-B-0005",
+        "EV-B-0006",
+        "EV-B-0007"
+      ]
+    },
+    {
+      "id": "CL-B-0005",
+      "category_ja": "確認済みの事実",
+      "text_ja": "Windows 11主対象・SQLite・ローカルmd/txt・本文執筆対象外という製品制約がある。",
+      "evidence_ids": [
+        "EV-B-0011"
+      ]
+    },
+    {
+      "id": "CL-B-0006",
+      "category_ja": "個人の経験・意見",
+      "text_ja": "開発者1名が分散・旧版・所在・再開・削除等の困りごとを報告する。",
+      "evidence_ids": [
+        "EV-B-0012"
+      ]
+    },
+    {
+      "id": "CL-B-0007",
+      "category_ja": "確認済みの事実",
+      "text_ja": "事務所関係者21名の限定的な執筆環境調査が存在する。",
+      "evidence_ids": [
+        "EV-B-0013"
+      ]
+    },
+    {
+      "id": "CL-B-0008",
+      "category_ja": "個人の経験・意見",
+      "text_ja": "Temppは短編の属性と人物リンクの管理例を示す。",
+      "evidence_ids": [
+        "EV-B-0014"
+      ]
+    },
+    {
+      "id": "CL-B-0009",
+      "category_ja": "個人の経験・意見",
+      "text_ja": "misariは作品別の整理と追加拡張Longformを用いる本人の運用を説明する。",
+      "evidence_ids": [
+        "EV-B-0015"
+      ]
+    },
+    {
+      "id": "CL-B-0010",
+      "category_ja": "個人の経験・意見",
+      "text_ja": "AI併用の長編改稿者が、決定・提案・廃止設定の混同と短いメモによる対処を報告する。",
+      "evidence_ids": [
+        "EV-B-0016"
+      ]
+    },
+    {
+      "id": "CL-B-0011",
+      "category_ja": "個人の経験・意見",
+      "text_ja": "公開創作論の筆者がOneNoteの設定集とExcel年表を使うと述べる。",
+      "evidence_ids": [
+        "EV-B-0017"
+      ]
+    },
+    {
+      "id": "CL-B-0012",
+      "category_ja": "個人の経験・意見",
+      "text_ja": "外部作者のコメントに複数アプリへ書いて混乱する本人報告がある。",
+      "evidence_ids": [
+        "EV-B-0018"
+      ]
+    },
+    {
+      "id": "CL-B-0013",
+      "category_ja": "個人の経験・意見",
+      "text_ja": "スマホを中心にPCとも併用する作者の本人報告がある。",
+      "evidence_ids": [
+        "EV-B-0019"
+      ]
+    },
+    {
+      "id": "CL-B-0014",
+      "category_ja": "確認済みの事実",
+      "text_ja": "カクヨムの2026-10-08アンケート告知は募集であり結果ではない。",
+      "evidence_ids": [
+        "EV-B-0020"
+      ]
+    },
+    {
+      "id": "CL-B-0015",
+      "category_ja": "確認済みの事実",
+      "text_ja": "Nola公式noteの紹介文は人物・プロット管理を説明する。現行の詳細仕様は未確認。",
+      "evidence_ids": [
+        "EV-B-0021"
+      ]
+    },
+    {
+      "id": "CL-B-0016",
+      "category_ja": "確認済みの事実",
+      "text_ja": "ObsidianはローカルMarkdownと外部変更を扱う。",
+      "evidence_ids": [
+        "EV-B-0022"
+      ]
+    },
+    {
+      "id": "CL-B-0017",
+      "category_ja": "確認済みの事実",
+      "text_ja": "Obsidianに通常検索と絞り込みがある。",
+      "evidence_ids": [
+        "EV-B-0023"
+      ]
+    },
+    {
+      "id": "CL-B-0018",
+      "category_ja": "確認済みの事実",
+      "text_ja": "Obsidianの復旧用コピーは完全なバックアップとは区別される。",
+      "evidence_ids": [
+        "EV-B-0024"
+      ]
+    },
+    {
+      "id": "CL-B-0019",
+      "category_ja": "確認済みの事実",
+      "text_ja": "Notionは制限付きのアプリオフライン利用に対応する。",
+      "evidence_ids": [
+        "EV-B-0025"
+      ]
+    },
+    {
+      "id": "CL-B-0020",
+      "category_ja": "確認済みの事実",
+      "text_ja": "Notionの通常検索とAIによる追加検索は区別される。",
+      "evidence_ids": [
+        "EV-B-0026"
+      ]
+    },
+    {
+      "id": "CL-B-0021",
+      "category_ja": "確認済みの事実",
+      "text_ja": "NotionにはMarkdown/CSV等への書出し経路がある。",
+      "evidence_ids": [
+        "EV-B-0027"
+      ]
+    },
+    {
+      "id": "CL-B-0022",
+      "category_ja": "確認済みの事実",
+      "text_ja": "WindowsデスクトップOneNoteにノート横断検索がある。",
+      "evidence_ids": [
+        "EV-B-0028"
+      ]
+    },
+    {
+      "id": "CL-B-0023",
+      "category_ja": "確認済みの事実",
+      "text_ja": "OneNoteでバックアップから復元するには、事前バックアップが必要である。",
+      "evidence_ids": [
+        "EV-B-0029"
+      ]
+    },
+    {
+      "id": "CL-B-0024",
+      "category_ja": "確認済みの事実",
+      "text_ja": "秀丸には標準の複数ファイル検索と該当行移動がある。",
+      "evidence_ids": [
+        "EV-B-0030"
+      ]
+    },
+    {
+      "id": "CL-B-0025",
+      "category_ja": "確認済みの事実",
+      "text_ja": "VS Codeの公式UI説明にフォルダ検索がある。",
+      "evidence_ids": [
+        "EV-B-0032"
+      ]
+    },
+    {
+      "id": "CL-B-0026",
+      "category_ja": "確認済みの事実",
+      "text_ja": "VS Codeの標準ローカル履歴・復元には保持等の設定制限がある。",
+      "evidence_ids": [
+        "EV-B-0032"
+      ]
+    },
+    {
+      "id": "CL-B-0027",
+      "category_ja": "確認済みの事実",
+      "text_ja": "SQLite FTS5のtrigramには3文字未満の全文検索に制約がある。",
+      "evidence_ids": [
+        "EV-B-0033"
+      ]
+    },
+    {
+      "id": "CL-B-0028",
+      "category_ja": "確認済みの事実",
+      "text_ja": "SQLiteには稼働DBのバックアップAPIがある。",
+      "evidence_ids": [
+        "EV-B-0034"
+      ]
+    },
+    {
+      "id": "CL-B-0029",
+      "category_ja": "確認済みの事実",
+      "text_ja": "SQLiteはDBトランザクションの原子性とその前提を説明する。",
+      "evidence_ids": [
+        "EV-B-0035"
+      ]
+    },
+    {
+      "id": "CL-B-0030",
+      "category_ja": "確認済みの事実",
+      "text_ja": "OWASPは未信頼データの表示に起因するXSSを説明する。",
+      "evidence_ids": [
+        "EV-B-0036"
+      ]
+    },
+    {
+      "id": "CL-B-0031",
+      "category_ja": "確認済みの事実",
+      "text_ja": "OWASPは外部ファイル由来の命令混同リスクを説明する。",
+      "evidence_ids": [
+        "EV-B-0037"
+      ]
+    },
+    {
+      "id": "CL-B-0032",
+      "category_ja": "確認済みの事実",
+      "text_ja": "llama.cppにCPU/GPU等の実行経路がある。対象製品の性能保証ではない。",
+      "evidence_ids": [
+        "EV-B-0038"
+      ]
+    },
+    {
+      "id": "CL-B-0033",
+      "category_ja": "確認済みの事実",
+      "text_ja": "MSIXを選ぶ場合、署名と端末側の信頼要件がある。",
+      "evidence_ids": [
+        "EV-B-0039"
+      ]
+    },
+    {
+      "id": "CL-B-0034",
+      "category_ja": "確認済みの事実",
+      "text_ja": "文化庁はAIと著作権に関する当事者向け資料を案内する。",
+      "evidence_ids": [
+        "EV-B-0040"
+      ]
+    },
+    {
+      "id": "CL-B-0035",
+      "category_ja": "未確認",
+      "text_ja": "対象サイト作者全体のWindows設定管理率、ジャンル・長さ・AI別需要差、画面構成別行動、音声操作の必要率は未確認。",
+      "evidence_ids": []
+    },
+    {
+      "id": "CL-B-0036",
+      "category_ja": "分析・仮説",
+      "text_ja": "資料を見つけること、正式情報を選ぶこと、前回の判断を取り戻すことは別の失敗として評価すべき。",
+      "evidence_ids": [
+        "EV-B-0012",
+        "EV-B-0016",
+        "EV-B-0018"
+      ]
+    },
+    {
+      "id": "CL-B-0037",
+      "category_ja": "分析・仮説",
+      "text_ja": "参照の利点だけでなく、登録・修正・維持の負担を含めて測る必要がある。",
+      "evidence_ids": [
+        "EV-B-0014",
+        "EV-B-0015"
+      ]
+    },
+    {
+      "id": "CL-B-0038",
+      "category_ja": "分析・仮説",
+      "text_ja": "既存ツールの整理と通常検索だけで十分な作者には、新アプリを導入しない選択も合理的。",
+      "evidence_ids": [
+        "EV-B-0022",
+        "EV-B-0023",
+        "EV-B-0026",
+        "EV-B-0028",
+        "EV-B-0030",
+        "EV-B-0032"
+      ]
+    },
+    {
+      "id": "CL-B-0039",
+      "category_ja": "未確認",
+      "text_ja": "導入・継続利用・支払意思、製品の動作要件・改善時間・完成工数は未確認。",
+      "evidence_ids": []
+    },
+    {
+      "id": "CL-B-0040",
+      "category_ja": "分析・仮説",
+      "text_ja": "課題・成功条件から選択肢を比較し、機能採用は人間が判断する。",
+      "evidence_ids": [
+        "EV-B-0011",
+        "EV-B-0012",
+        "EV-B-0016",
+        "EV-B-0022",
+        "EV-B-0023"
+      ]
+    },
+    {
+      "id": "CL-B-0041",
+      "category_ja": "確認済みの事実",
+      "text_ja": "なろうの原文は直接・間接・補助・不使用を区別する。",
+      "evidence_ids": [
+        "EV-B-0001"
+      ]
+    },
+    {
+      "id": "CL-B-0042",
+      "category_ja": "確認済みの事実",
+      "text_ja": "カクヨムの一般ガイドラインはAI3タグを推奨する。",
+      "evidence_ids": [
+        "EV-B-0002"
+      ]
+    },
+    {
+      "id": "CL-B-0043",
+      "category_ja": "分析・仮説",
+      "text_ja": "アプリのモードやローカル処理だけで、作品全体のAI申告や規約適合を確定しない。",
+      "evidence_ids": [
+        "EV-B-0001",
+        "EV-B-0002",
+        "EV-B-0004"
+      ]
+    }
+  ]
+}
