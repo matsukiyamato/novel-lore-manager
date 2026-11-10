@@ -1,0 +1,69 @@
+/* ver3: the same project shelf and startup artwork in all three themes. */
+.project-screen{padding:clamp(24px,4vh,44px) clamp(24px,4vw,68px) 38px}
+.project-screen>*{width:min(100%,1280px)}
+.project-hero{padding-bottom:22px}
+.project-hero h1{font-size:clamp(30px,3.3vw,44px);margin:6px 0 8px}
+.project-recent{padding:22px 28px;margin-top:24px;background:var(--surface);border:1px solid var(--border)}
+.project-recent .project-section-heading{margin-bottom:12px}
+.project-recent-entry{display:flex;align-items:center;gap:28px}
+.project-recent-entry .project-book{flex:none;width:138px;height:164px;margin:0;font-size:18px}
+.project-recent-entry .project-book-meta{font-size:16px}
+.project-shelf{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:24px;margin-bottom:24px}
+.project-screen .project-choice{min-height:500px;padding:32px 36px;background:var(--raised);border:1px solid var(--border);box-shadow:none}
+.project-screen .project-existing{border-left:8px solid var(--accent)}
+.project-screen .project-create{border-left:8px solid var(--border)}
+.project-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;margin-bottom:20px}
+.project-section-heading h2{font-size:21px;margin:0}
+.project-section-note{font-size:12px;color:var(--muted);text-align:right}
+.project-add-mark{font-size:32px;line-height:1;color:var(--accent);font-weight:300}
+.project-book-entry{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;flex:1;min-height:0}
+.project-screen .project-book{width:clamp(190px,19vw,260px);height:clamp(230px,26vw,320px);margin:0 0 20px;border:1px solid var(--border);border-left:9px solid color-mix(in srgb,var(--border) 76%,transparent);border-radius:3px 6px 6px 3px;box-shadow:10px 12px 0 #0002,inset 7px 0 10px #0003;font-family:"Yu Mincho","MS PMincho",serif;font-size:clamp(23px,2vw,29px);color:#fff7e9;transition:transform .18s ease,box-shadow .18s ease}
+.project-screen .project-book:hover{transform:translateY(-3px);box-shadow:10px 15px 0 #0003,inset 7px 0 10px #0003}
+.project-screen .project-book.cover-forest:hover{background:linear-gradient(140deg,#1b3b33,#365548)}
+.project-screen .project-book.cover-parchment:hover{background:linear-gradient(140deg,#7a513e,#a87c57)}
+.project-screen .project-book.cover-plain:hover{background:linear-gradient(140deg,#416c67,#79928b)}
+.project-screen .project-book:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+.project-book-meta{align-self:flex-start;margin:0;color:var(--muted);font-size:14px}
+.project-screen .project-existing.has-two-books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;column-gap:16px}
+.project-existing.has-two-books .project-section-heading{grid-column:1/-1}
+.project-existing.has-two-books .project-book-entry{justify-content:start}
+.project-existing.has-two-books .project-book{width:min(100%,190px);height:240px;font-size:21px}
+.project-create>p:first-of-type{margin:0 0 16px}
+.project-screen .project-form{margin-top:0;gap:5px}
+.project-screen .project-form label{margin:8px 0 5px;font-size:14px}
+.project-screen .project-form input,.project-screen .project-form select{min-height:44px}
+.project-screen .project-form button{min-height:44px;margin-top:8px;font-weight:700}
+.project-screen .project-help{margin-top:12px}
+.project-screen .project-guide{margin-top:0}
+
+/* The seasonal tree is drawn locally as SVG; only the scene's sky changes by time. */
+.splash{gap:17px;padding:24px;text-align:center}
+.splash>strong{font-size:clamp(28px,3vw,38px)}
+.tree-scene{position:relative;display:grid;place-items:center;width:min(440px,calc(100vw - 48px));height:min(310px,40vh);min-height:230px;isolation:isolate;border:1px solid var(--border);border-radius:7px;overflow:hidden;background:linear-gradient(180deg,var(--sky-top),var(--sky-bottom));transition:background-color .5s ease}
+.splash.time-morning{--sky-top:#edbe92;--sky-bottom:#f4e1b8}
+.splash.time-day{--sky-top:#83b9d5;--sky-bottom:#dcebd5}
+.splash.time-evening{--sky-top:#8d638a;--sky-bottom:#d99a83}
+.splash.time-night{--sky-top:#172b4b;--sky-bottom:#4a5774}
+.tree-scene::before{content:"";position:absolute;inset:auto -5% 0;height:26%;background:#314e3e;clip-path:ellipse(68% 80% at 50% 100%)}
+.tree-sky-light{position:absolute;top:27px;right:54px;width:36px;height:36px;border-radius:50%;background:#fff5cc;box-shadow:0 0 28px #fff3c08a}
+.time-night .tree-sky-light{background:#f2efd8;box-shadow:0 0 24px #fff9d888}
+.time-evening .tree-sky-light{background:#f6bf8c}
+.season-tree-art{position:relative;z-index:1;width:min(300px,95%);height:100%;max-height:300px;overflow:visible}
+.tree-ground{fill:#223f34;opacity:.45}
+.tree-stem,.tree-branches{fill:#664534;stroke:#664534;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+.tree-branches{fill:none}
+.season-spring{--tree-crown:#dfa1b8;--tree-highlight:#f2cbd8;--tree-drift:#fbe1e8}
+.season-summer{--tree-crown:#386f45;--tree-highlight:#70a75c;--tree-drift:#b7d38f}
+.season-autumn{--tree-crown:#af5437;--tree-highlight:#dc9445;--tree-drift:#efb861}
+.season-winter{--tree-crown:#245343;--tree-highlight:#477363;--tree-drift:#f7f8f5}
+.tree-foliage{fill:var(--tree-crown);stroke:var(--tree-crown);stroke-width:3}
+.tree-highlights{fill:var(--tree-highlight);opacity:.62}
+.tree-snow{fill:#f2f6f5;opacity:.96}
+.tree-garland{fill:none;stroke:#d7bc70;stroke-width:3;stroke-linecap:round}
+.tree-drift{fill:var(--tree-drift);opacity:.8;animation:tree-drift 4.5s ease-in-out infinite;animation-delay:calc(var(--drift)*-.29s)}
+.season-tree-art .tree-foliage{transform-origin:50% 85%;animation:tree-sway 6s ease-in-out infinite}
+@keyframes tree-sway{50%{transform:rotate(1.6deg)}}
+@keyframes tree-drift{50%{transform:translate(9px,20px);opacity:.4}}
+@media(max-width:900px){.project-shelf{gap:16px}.project-screen .project-choice{padding:24px;min-height:460px}.project-section-note{display:none}}
+@media(max-width:700px){.project-recent{padding:18px}.project-recent-entry .project-book{width:112px;height:142px;font-size:16px}.project-shelf{grid-template-columns:1fr}.project-screen .project-choice{min-height:0}.project-book-entry{padding:8px 0 20px}.project-screen .project-book{width:210px;height:260px}.project-screen .project-create{min-height:0}}
+@media(prefers-reduced-motion:reduce){.tree-drift,.season-tree-art .tree-foliage{animation:none!important}.project-screen .project-book{transition:none!important}.tree-scene{transition:none!important}}

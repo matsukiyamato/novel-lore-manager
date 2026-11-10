@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja" data-theme="forest">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Recall — 灰冠の王国</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link id="theme-sheet" rel="stylesheet" href="styles/forest.css">
+  <script type="module" src="scripts/app.js"></script>
+</head>
+<body data-page="recall">
+  <a class="skip-link" href="#recall-main">検索結果へ移動</a>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.7" cy="10.7" r="6.6"/><path d="m15.7 15.7 5 5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 5 7 7-7 7"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2.8h8l4 4v14.4H6zM14 2.8v4.5h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M8 3h8l-1 6 3 3v2H6v-2l3-3zM12 14v7"/></symbol>
+  </svg>
+  <div class="recall-shell">
+    <header class="recall-titlebar"><div class="recall-brand"><span class="brand-mark" aria-hidden="true">N<span>L</span></span><span><strong>Quick Recall</strong><small>灰冠の王国</small></span></div><div class="recall-window-actions"><span class="recall-mock">独立ウィンドウ相当</span><button type="button" class="window-minimize" id="minimize-recall" aria-label="Quick Recallを最小化">−</button><button type="button" class="window-close" id="close-recall" aria-label="Quick Recallを閉じる">×</button></div></header>
+    <main id="recall-main" tabindex="-1" class="recall-main">
+      <div class="recall-search"><label for="recall-query">設定を検索</label><div class="recall-search-box"><svg><use href="#i-search"/></svg><input id="recall-query" type="search" value="エレナ" autocomplete="off" aria-describedby="recall-search-note"><kbd>Enter</kbd></div><p id="recall-search-note">現在の作品内を検索します</p></div>
+      <div class="recall-results-heading"><h1>検索結果</h1><span id="result-count">3件</span></div>
+      <div class="recall-results" role="group" aria-label="資料の検索結果"><button type="button" class="recall-result is-selected" aria-pressed="true" data-document="elena"><span class="result-kind">人物</span><span class="result-text"><strong>エレナ・ヴァルツ</strong><small>王立魔導学院の記録官。灰冠の由来を知る。</small></span><svg><use href="#i-chevron"/></svg></button><button type="button" class="recall-result" aria-pressed="false" data-document="leon"><span class="result-kind">人物</span><span class="result-text"><strong>レオン・クロード</strong><small>エレナと北方遠征の記録を共有する。</small></span><svg><use href="#i-chevron"/></svg></button><button type="button" class="recall-result" aria-pressed="false" data-document="academy"><span class="result-kind">組織</span><span class="result-text"><strong>王立魔導学院</strong><small>エレナが所属する学院。第二書庫を持つ。</small></span><svg><use href="#i-chevron"/></svg></button></div>
+      <section class="recall-overview" aria-labelledby="overview-title"><div class="recall-section-head"><span>選択した資料の概要</span><span class="overview-category" id="overview-category">人物</span></div><h2 id="overview-title">エレナ・ヴァルツ</h2><p id="overview-summary">王立魔導学院の記録官。「灰冠」の由来を知る数少ない人物。禁書庫の封印を独自に調べている。</p><dl class="recall-facts" id="overview-facts"><div><dt>所属</dt><dd>王立魔導学院</dd></div><div><dt>別名</dt><dd>灰の記録者</dd></div></dl></section>
+      <div class="recall-actions"><button type="button" class="recall-action primary" id="show-detail" aria-expanded="false">詳細を見る <svg><use href="#i-chevron"/></svg></button><button type="button" class="recall-action" id="show-memo" aria-expanded="false">簡易メモを開く</button></div>
+      <section class="recall-expanded" id="recall-detail" hidden aria-label="資料の詳細"><h3>人物像</h3><p id="detail-text">慎重で寡黙。記録の欠落を何より恐れる一方、禁書庫の封印について独自に調べている。</p><div class="detail-meta"><span>資料を編集</span><span class="not-implemented">このモックでは閲覧のみ</span></div></section>
+      <section class="recall-expanded" id="recall-memo" hidden aria-label="簡易メモ"><label for="memo-text">執筆中のメモ</label><textarea id="memo-text" rows="3" placeholder="例：第2章の学院訪問で、エレナに灰冠の刻印を見せる"></textarea><p>このメモは画面内だけの入力です。保存されません。</p></section>
+      <p class="recall-empty" id="recall-empty" hidden>一致する資料はありません。名前や別名を変えて検索してください。</p>
+    </main>
+    <footer class="recall-footer"><span><span class="status-indicator"></span>作品内の設定資料</span><span>UIモック / 実ファイル操作なし</span></footer>
+  </div>
+</body>
+</html>

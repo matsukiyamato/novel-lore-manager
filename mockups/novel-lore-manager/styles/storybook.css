@@ -1,0 +1,16 @@
+@charset "UTF-8";
+:root{
+  --scheme:light;
+  --font-ui:"Yu Gothic UI","Meiryo",sans-serif;
+  --canvas:#efe9da;--chrome:#e7deca;--rail:#e5dbc6;--panel:#f1ebdc;--surface:#faf6ea;
+  --tabbar:#e9e0ce;--source:#f8f3e7;--input:#fffaf0;--switch:#ebe3d2;--status:#e8dfca;
+  --text:#302b25;--muted:#625b51;--accent:#5b4537;--accent-on:#fffaf0;
+  --focus:#6a4b21;--border:#8a7b65;--selected:#e5d6bb;--hover:#eae0ca;--tag:#efe6d2;
+  --warning:#805018;--danger:#983c35;--syntax:#7a4e2e;--link:#5b4537;
+  --line-number:#736b5e;--source-highlight:#eee3cd;
+  --doc-heading:600 23px/1.25 "Yu Mincho","Hiragino Mincho ProN",serif;
+  --preview-h2:600 24px/1.35 "Yu Mincho","Hiragino Mincho ProN",serif;
+  --preview-h3:600 17px/1.4 "Yu Mincho","Hiragino Mincho ProN",serif;
+  --recall-heading:600 18px/1.35 "Yu Mincho","Hiragino Mincho ProN",serif;
+  --source-font:15px/26px "Cascadia Code","Consolas","Yu Gothic UI",monospace;
+}

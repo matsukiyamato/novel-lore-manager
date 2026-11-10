@@ -1,0 +1,16 @@
+@charset "UTF-8";
+:root{
+  --scheme:light;
+  --font-ui:"Yu Gothic UI","Meiryo",sans-serif;
+  --canvas:#f2f5f0;--chrome:#e6eee7;--rail:#e9f0e9;--panel:#f5f8f3;--surface:#fffefa;
+  --tabbar:#eaf1e9;--source:#fbfdf9;--input:#fffefa;--switch:#edf3ec;--status:#e6eee7;
+  --text:#23342b;--muted:#526158;--accent:#315f4a;--accent-on:#fffefa;
+  --focus:#245eaa;--border:#82988a;--selected:#dce9db;--hover:#e3eee2;--tag:#e9f1e8;
+  --warning:#85560b;--danger:#9b3333;--syntax:#315f4a;--link:#315f4a;
+  --line-number:#687d6e;--source-highlight:#eaf3e8;
+  --doc-heading:600 23px/1.25 "Yu Gothic UI","Meiryo",sans-serif;
+  --preview-h2:650 24px/1.35 "Yu Gothic UI","Meiryo",sans-serif;
+  --preview-h3:600 17px/1.4 "Yu Gothic UI","Meiryo",sans-serif;
+  --recall-heading:650 18px/1.35 "Yu Gothic UI","Meiryo",sans-serif;
+  --source-font:15px/26px "Cascadia Code","Consolas","Yu Gothic UI",monospace;
+}
