@@ -67,3 +67,90 @@
 @media(max-width:900px){.project-shelf{gap:16px}.project-screen .project-choice{padding:24px;min-height:460px}.project-section-note{display:none}}
 @media(max-width:700px){.project-recent{padding:18px}.project-recent-entry .project-book{width:112px;height:142px;font-size:16px}.project-shelf{grid-template-columns:1fr}.project-screen .project-choice{min-height:0}.project-book-entry{padding:8px 0 20px}.project-screen .project-book{width:210px;height:260px}.project-screen .project-create{min-height:0}}
 @media(prefers-reduced-motion:reduce){.tree-drift,.season-tree-art .tree-foliage{animation:none!important}.project-screen .project-book{transition:none!important}.tree-scene{transition:none!important}}
+
+/* The project library uses the same books and form in every theme. */
+.project-screen{padding:clamp(22px,3.2vh,42px) clamp(24px,5vw,84px) 42px}
+.project-screen>*{width:min(100%,1380px)}
+.project-hero{border-bottom:0;padding-bottom:8px}
+.project-brand{font-size:13px;letter-spacing:0}
+.project-hero h1{font-size:clamp(27px,2.5vw,36px);margin:4px 0 6px}
+.project-recent{margin-top:18px;padding:18px 22px;background:var(--raised);border-radius:8px}
+.project-recent .project-section-heading h2,.project-existing .project-section-heading h2{padding-left:11px;border-left:5px solid var(--accent)}
+.project-recent-entry{gap:16px;align-items:stretch}
+.project-recent-entry .project-book{width:clamp(180px,19vw,240px);height:180px;margin:0;font-size:21px}
+.project-recent-entry .project-book-meta{align-self:end;padding-bottom:8px}
+.project-shelf{display:flex;flex-direction:column;gap:0;margin-top:30px;margin-bottom:14px}
+.project-screen .project-choice{min-height:0;padding:20px 22px;border-left:1px solid var(--border);box-shadow:none}
+.project-screen .project-existing{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,230px));gap:14px 20px;background:transparent;border:0;padding:0}
+.project-existing .project-section-heading{grid-column:1/-1;margin-bottom:0}
+.project-screen .project-existing.has-two-books{grid-template-columns:repeat(auto-fit,minmax(190px,230px));gap:14px 20px}
+.project-book-entry{display:block;min-width:0;padding:12px;background:var(--raised);border:1px solid var(--border);border-radius:6px}
+.project-screen .project-book,.project-existing.has-two-books .project-book{width:100%;height:245px;margin:0 0 12px;border-left-width:7px;box-shadow:inset 6px 0 10px #0003;font-size:21px}
+.project-book-meta{align-self:auto;font-size:12px;line-height:1.5}
+.project-screen .project-create{margin-top:24px;max-width:650px;background:var(--raised);border-left:5px solid var(--accent)}
+.project-create>p:first-of-type{margin-bottom:8px}
+.project-screen .project-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 14px}
+.project-form label[for=project-name],.project-form #project-name,.project-form #project-error,.project-form button{grid-column:1/-1}
+.project-screen .project-guide{align-self:flex-start;margin:8px 0 0}
+.splash{gap:20px}
+.splash>strong{font-size:clamp(34px,3vw,48px);font-weight:600;letter-spacing:.01em}
+.tree-scene{width:min(550px,calc(100vw - 48px));height:min(365px,45vh);min-height:250px}
+.season-tree-art{width:min(370px,95%);max-height:355px}
+.splash>small{font-size:14px}
+.splash>button{min-height:48px;padding:8px 20px;border-color:var(--accent);font-weight:700}
+.ruby-panel-tabs{display:flex;gap:8px;margin:12px 0 4px}
+.ruby-panel-tabs button.active{background:var(--selected);box-shadow:inset 0 -3px var(--accent);font-weight:700}
+.ruby-success{min-height:1.5em;margin:0 0 8px;color:var(--text);font-weight:700}
+.storage-search{margin-bottom:12px}
+.storage-tabs{margin-bottom:12px}
+.storage-tag-label{display:grid;gap:4px;width:min(100%,380px);margin-bottom:12px;font-weight:700}
+.storage-tag-label select{width:100%}
+.recall-ruby-form{display:grid;gap:8px;border-top:1px solid var(--border);padding-top:12px;margin-top:12px}
+.recall-ruby-form label{display:grid;gap:4px}
+.recall-ruby-form button{justify-self:start}
+.recall-ruby-form p{min-height:1.5em;margin:0}
+@media(max-width:700px){.project-screen .project-existing,.project-screen .project-existing.has-two-books{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.project-screen .project-book,.project-existing.has-two-books .project-book{height:210px}.project-screen .project-form{grid-template-columns:1fr}.project-recent-entry{flex-direction:column}.project-recent-entry .project-book{width:100%;height:145px}.project-recent-entry .project-book-meta{align-self:start}.tree-scene{height:300px}}
+
+/* Project library: one semantic structure, colored by the selected theme. */
+.project-screen{padding:clamp(24px,3vw,48px) clamp(24px,5vw,84px) 48px}
+.project-screen>*{width:min(100%,1440px)}
+.project-hero{border-bottom:1px solid var(--border);padding-bottom:24px}
+.project-hero h1{font-size:clamp(30px,3vw,44px)}
+.project-recent{padding:22px 28px;margin-top:28px;background:var(--raised);border:1px solid var(--border)}
+.project-recent-books{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.project-recent-entry{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;gap:14px;min-width:0}
+.project-recent-entry .project-book{width:112px;height:142px;margin:0;font-size:17px}
+.project-recent-entry .project-book-meta{align-self:center;font-size:13px;line-height:1.6}
+.project-shelf{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.9fr);gap:24px;margin:28px 0 18px}
+.project-screen .project-choice{min-height:470px;margin:0;padding:24px 28px;background:var(--raised);border:1px solid var(--border)}
+.project-screen .project-existing{display:flex;flex-direction:column;border-left:7px solid var(--accent)}
+.project-screen .project-create{margin-top:0;border-left:7px solid var(--border)}
+.project-list-controls{display:flex;gap:12px;align-items:end;margin:0 0 14px}
+.project-list-controls label{display:grid;gap:5px;flex:1;min-width:0;margin:0;font-size:12px}
+.project-list-controls label:last-child{flex:0 0 150px}
+.project-list-controls input,.project-list-controls select{min-height:38px;width:100%;padding:6px 10px;background:var(--surface);color:var(--text);border:1px solid var(--border)}
+.project-books{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;align-content:start;width:100%}
+.project-book-entry{display:flex;flex-direction:column;align-items:stretch;padding:10px;min-width:0;background:var(--surface);border:1px solid var(--border)}
+.project-books .project-book{width:100%;height:205px;margin:0 0 10px;font-size:20px}
+.project-books .project-book-meta{margin-top:auto}
+.project-add-book{min-height:205px!important;border-style:dashed!important;background:transparent!important;font-weight:700}
+.project-books .empty-state{grid-column:1/-1}
+.project-screen .project-form{display:grid;grid-template-columns:1fr;gap:4px}
+.project-form>*{grid-column:1/-1}
+.project-screen .project-form label{margin:8px 0 3px}
+.project-screen .project-guide{margin:14px 0 0}
+.storage-search{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:12px}
+.storage-search label{flex:1 1 240px;max-width:380px;margin:0}
+.storage-search .storage-tag-label{margin:0}
+.storage-tabs{margin-bottom:16px}
+.flow-view:has(.storage-search)>h1,.flow-view:has(.storage-search)>.flow-intro{text-align:left}
+.pixel-ground{fill:#314e3e}.pixel-trunk{fill:#684734}
+.tree-scene{border-radius:2px;image-rendering:pixelated}
+.tree-scene::before{display:none}
+.tree-sky-light{border-radius:0;box-shadow:none;width:40px;height:40px;clip-path:polygon(25% 0,75% 0,75% 25%,100% 25%,100% 75%,75% 75%,75% 100%,25% 100%,25% 75%,0 75%,0 25%,25% 25%)}
+.season-tree-art{width:min(370px,95%);max-height:355px}
+.season-tree-art .tree-foliage{animation:none;stroke:none}
+.tree-highlights{opacity:.8}
+.splash.time-night{filter:none}
+@media(max-width:1050px){.project-recent-books{grid-template-columns:repeat(2,minmax(0,1fr))}.project-shelf{grid-template-columns:1fr}.project-screen .project-choice{min-height:0}}
+@media(max-width:700px){.project-recent-books{grid-template-columns:1fr}.project-recent-entry{grid-template-columns:90px 1fr}.project-recent-entry .project-book{width:90px;height:112px}.project-list-controls{flex-direction:column;align-items:stretch}.project-list-controls label:last-child{flex:auto}.project-books{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}.project-screen .project-choice{padding:18px}.storage-search{display:grid}}
