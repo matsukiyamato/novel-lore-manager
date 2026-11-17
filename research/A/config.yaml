@@ -1,0 +1,69 @@
+# 自作の調査設定。Codex公式の自動実行スキーマではない。
+version: 1
+scenario: A
+purpose: "現行全機能の100%実装を仮定した適合性・リスク評価"
+branch: "research/lore-a_ver1.0"
+mode: sequential_roles
+scope:
+  allowed_output_root: "research/A/outputs"
+  allowed_inputs:
+    - "research/A/inputs/constraints.md"
+    - "research/A/inputs/feature-inventory.md"
+    - "research/A/inputs/developer-observation.md"
+  read_only_rules:
+    - "AGENTS.md"
+    - "research/AGENTS.md"
+    - "research/A/AGENTS.md"
+    - "research/common/research-policy.md"
+    - "research/common/evidence-policy.md"
+    - ".agents/skills/lore-research/SKILL.md"
+  forbidden_paths:
+    - "research/B"
+    - "research/C"
+    - "src"
+    - "docs/decisions"
+  no_git_changes: true
+  no_product_code_changes: true
+research:
+  questions_file: "research/A/questions.md"
+  external_web_research: true
+  interview_data_available: false
+  official_sources:
+    - "https://syosetu.com/site/ai/"
+    - "https://kakuyomu.jp/legal/guideline"
+  competitor_seed_names:
+    - "Nola"
+    - "Obsidian"
+    - "Notion"
+    - "OneNote"
+    - "秀丸"
+    - "Visual Studio Code"
+  evidence_required: true
+steps:
+  - id: "check-inputs"
+    role: "controller"
+    output: "research/A/outputs/input-audit.md"
+  - id: "research"
+    role: "market-competitor-ux"
+    output: "research/A/outputs/source-research.md"
+  - id: "feature-evaluation"
+    role: "author-editor-technical"
+    output: "research/A/outputs/feature-evaluation.md"
+  - id: "risk-review"
+    role: "legal-security"
+    output: "research/A/outputs/legal-security.md"
+  - id: "evidence-audit"
+    role: "evidence-auditor"
+    output: "research/A/outputs/evidence-audit.md"
+  - id: "skeptic"
+    role: "skeptic"
+    output: "research/A/outputs/skeptic-review.md"
+  - id: "pdm-report"
+    role: "pdm"
+    output: "research/A/outputs/scenario-a-report.md"
+quality_gates:
+  - "全機能に評価または未判定理由が付いている"
+  - "重要な主張が証拠IDまたは未確認状態へ対応している"
+  - "実ユーザー需要を実証済みと宣言していない"
+  - "未解決の重大な反対意見が最終報告に残る"
+final_decision_owner: "human_developer"
