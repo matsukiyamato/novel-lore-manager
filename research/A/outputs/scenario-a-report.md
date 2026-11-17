@@ -113,3 +113,4 @@ SQLiteの検索・履歴・採用状態、元ファイル/添付、派生索引�
 | evidence-audit.md | 根拠の適合、取得制限、重複、5残存指摘、ID検算 |
 | skeptic-review.md | 11反証、代替策、棄却条件 |
 | scenario-a-report.md | 本報告、質問別回答、分類、保留、品質ゲート |
+
