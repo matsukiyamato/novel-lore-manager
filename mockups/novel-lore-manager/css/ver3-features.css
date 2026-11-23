@@ -1,0 +1,42 @@
+.explorer-section-head,.folder-heading{display:flex;align-items:center;gap:4px;min-width:0}
+.explorer-section-head{justify-content:space-between;margin-bottom:8px}
+.explorer-section-head h3{margin:0}
+.tree-create{display:inline-flex;align-items:center;gap:4px;min-height:32px;padding:4px 6px;font-size:12px;white-space:nowrap}
+.tree-icon{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+.folder-heading .folder-toggle{display:flex;align-items:center;gap:6px;min-width:0;min-height:36px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.folder-heading .folder-toggle::before{content:"";width:6px;height:6px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg)}
+.folder-heading .folder-toggle[aria-expanded="true"]::before{transform:rotate(45deg)}
+.folder-heading .folder-add{display:grid;place-items:center;flex:none;width:34px;height:34px;min-height:34px;padding:4px;border:0;background:transparent}
+.folder-add:hover{background:var(--hover)}
+.doc-list{margin-left:13px;padding-left:11px;border-left:1px solid var(--border)}
+.doc-list .doc-row{position:relative;display:flex;align-items:center;gap:7px;padding-left:8px;overflow-wrap:anywhere}
+.doc-list .doc-row::before{content:"";position:absolute;left:-12px;top:50%;width:12px;border-top:1px solid var(--border)}
+.doc-list .doc-row:last-child::after{content:"";position:absolute;left:-13px;top:50%;bottom:0;width:2px;background:var(--raised)}
+.folder-empty{margin:2px 0 8px 24px;color:var(--muted);font-size:12px}
+.category-heading{display:flex;align-items:center;gap:4px;min-width:0}
+.category-heading .category-button{display:flex;justify-content:flex-start;align-items:center;gap:6px;min-width:0;min-height:36px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.category-heading .category-button::before{content:"";width:6px;height:6px;flex:none;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg)}
+.category-heading .category-button[aria-expanded="true"]::before{transform:rotate(45deg)}
+.category-heading .category-add{display:grid;place-items:center;flex:none;width:34px;height:34px;min-height:34px;padding:4px;border:0;background:transparent}
+.category-add:hover{background:var(--hover)}
+.category-doc-list{margin-left:13px;padding-left:11px;border-left:1px solid var(--border)}
+.category-doc-list .doc-row{position:relative;display:flex;align-items:center;gap:7px;padding-left:8px;overflow-wrap:anywhere}
+.category-doc-list .doc-row::before{content:"";position:absolute;left:-12px;top:50%;width:12px;border-top:1px solid var(--border)}
+.category-doc-list .doc-row:last-child::after{content:"";position:absolute;left:-13px;top:50%;bottom:0;width:2px;background:var(--raised)}
+.tree-name-edit{display:grid;grid-template-columns:19px minmax(0,1fr);align-items:center;gap:6px;padding:2px 4px 2px 8px;min-width:0}
+.tree-name-edit input{width:100%;min-width:0;height:30px;padding:3px 5px}
+.tree-name-error{grid-column:1 / -1;color:var(--danger);font-size:12px;line-height:1.4}
+.tree-name-error:empty{display:none}
+#markdown-help{display:grid;place-items:center;width:32px;height:32px;min-width:32px;min-height:32px;padding:0;border:1.5px solid currentColor;border-radius:50%;background:transparent;color:var(--text);font-weight:700;font-size:17px;line-height:1}
+#markdown-help:hover{background:var(--hover)}
+.create-dialog form{display:grid;gap:8px}
+.create-dialog label{display:grid;gap:5px;font-weight:700}
+.create-dialog input,.create-dialog select{width:100%}
+.create-dialog .field-error{margin:0}
+.help-dialog{width:min(650px,calc(100vw - 32px))}
+.syntax-examples{display:grid;gap:1px;background:var(--border);border:1px solid var(--border);margin:14px 0;max-height:min(60vh,450px);overflow:auto}
+.syntax-row{display:grid;grid-template-columns:100px minmax(0,1fr) minmax(0,1fr);gap:10px;align-items:center;background:var(--surface);padding:10px 12px}
+.syntax-row code{font-family:Consolas,"Yu Gothic UI",monospace;overflow-wrap:anywhere}
+.syntax-row span{overflow-wrap:anywhere}
+.help-dialog .ruby-note{line-height:1.6;color:var(--muted)}
+@media(max-width:700px){.syntax-row{grid-template-columns:1fr;gap:3px}.toolbar{flex-wrap:wrap}.toolbar-spacer{min-width:8px}}
