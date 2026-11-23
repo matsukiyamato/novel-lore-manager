@@ -3,7 +3,7 @@
 > 文書状態：レビュー用。製品仕様の最終決定を示すものではない。  
 > 対象：Windowsデスクトップアプリを表現した現行ブラウザモック  
 > 根拠：[Novel_Lore_Manager_Requirements_v1.0.md](Novel_Lore_Manager_Requirements_v1.0.md) と [モックアップ機能設計書.md](モックアップ機能設計書.md)  
-> 現行モックの記述時点：2026-11-15。以下の実装判定はモックアップ機能設計書の記載を引き継いだものであり、本書作成時のコード再検証結果ではない。
+> 現行モックの記述時点：2026-11-15。機能ごとの実装判定はモックアップ機能設計書の記載を引き継いだものである。2026-11-23に現行のHTML・CSS・JavaScriptをローカルで照合し、追加されたモック操作を該当項目へ追記した。画面操作の通し検証は行っていない。
 
 
 ## 目次
@@ -31,7 +31,7 @@
 ### 1.1 対象とデータ境界
 
 - 現行モックの起点は `mockups/novel-lore-manager/index.html`。HTML5、CSS3、Vanilla JavaScript（ES Modules）を使用する。`preview.mjs` による `127.0.0.1:4173` のローカル静的配信を前提とし、`file://` 起動は想定しない。
-- 初期作品「灰冠の王国」には架空資料6件（人物3、世界観2、組織1）がある。新規作品・資料・編集・履歴・ルビ辞書・メモ・保管状態・取り込み結果はページのメモリ内にあり、再読み込みで初期化される。作品切替時は作品ごとの資料・タブ・選択状態を退避・復元する設計だが、ブラウザでの通し検証は未了。
+- 初期作品「灰冠の王国」には架空資料6件（人物3、世界観2、組織1）がある。新規作品・フォルダ・資料・資料名変更・編集・履歴・ルビ辞書・メモ・保管状態・取り込み結果はページのメモリ内にあり、再読み込みで初期化される。作品切替時は作品ごとの資料・フォルダ一覧・タブ・選択状態を退避・復元する設計だが、ブラウザでの通し検証は未了。
 - テーマ選択だけを `localStorage` の `nlm-theme` に保持する。「保存」「取り込み」「削除」「復元」は実ファイルやDBを変更しない。取り込み対象は名前と相対パスを参照し、本文は読み取らない。
 - 対象JSに外部API呼び出しはない。ローカル配信、画面から開き得る通常のHTTP(S)リンク、外部API連携は別の概念である。AI機能の入口は初期モックに表示しない。
 - ブラウザ小窓はWindowsの常時最前面、OS全域ショートカット、ネイティブ最小化、メイン終了後の常駐を保証しない。
@@ -56,58 +56,53 @@
 ### 2.1 画面ごとの現在の実画像
 
 スタート画面：
- - ![alt text](../mockups_imagever2.0/スタート画面.png)
+ - ![alt text](../../mockups_imagever2.0/スタート画面.png)
 
 作品作成・選択画面：
- - ![alt text](../mockups_imagever2.0/作品作成・選択画面上画面.png)
- - ![alt text](../mockups_imagever2.0/作品作成・選択下画面.png)
- - ![alt text](../mockups_imagever2.0/作品作成・選択画面操作説明画面.png)
-  
-**注意**：
- 説明：
- - ここの画面は作品作成・選択画面のデザインをこれに変更して欲しい時の見本画像。
- - 現在の作品作成・選択画面の機能は残しつつ、下記2つの画像を元に修正して欲しい時の画像。
+ - ![alt text](../../mockups_imagever2.0/作品作成・選択画面上画面.png)
+ - ![alt text](../../mockups_imagever2.0/作品作成・選択下画面.png)
+ - ![alt text](../../mockups_imagever2.0/作品作成・選択画面操作説明画面.png)
 
- - ![alt text](../mockups_imagever2.0/作品作成画面上画面見本.png)
- - ![alt text](../mockups_imagever2.0/作品作成画面下画面見本.png)
-
+資料一覧・編集・表示・関連・記号説明画面：
+ - ![alt text](../../mockups_imagever2.0/資料一覧・編集・表示画面.png)
+ - 資料一覧・関連画面：
+  - ![alt text](../../mockups_imagever2.0/資料作成画面・関連資料画面.png)
+ - 資料一覧画面編集記号説明画面：
+   - ![alt text](../../mockups_imagever2.0/資料一覧画面編集記号説明画面.png)
 
 作品内検索画面：
-
- - ![alt text](../mockups_imagever2.0/作品内検索画面フォルダカテゴリ絞り込み非表示.png)
- - ![alt text](../mockups_imagever2.0/作品内検索画面フォルダカテゴリ絞り込み表示.png)
+ - ![alt text](../../mockups_imagever2.0/作品内検索画面フォルダカテゴリ絞り込み非表示.png)
+ - ![alt text](../../mockups_imagever2.0/作品内検索画面フォルダカテゴリ絞り込み表示.png)
 
 取り込み画面：
-
- - ![alt text](../mockups_imagever2.0/資料取り込み画面.png)
- - ![alt text](../mockups_imagever2.0/資料取り込み画面1-5.png)
- - ![alt text](../mockups_imagever2.0/資料取り込み画面2-5.png)
- - ![alt text](../mockups_imagever2.0/資料取り込み画面3-5.png)
- - ![alt text](../mockups_imagever2.0/資料取り込み画面4・5.png)
- - ![alt text](../mockups_imagever2.0/資料取り込み画面5・5.png)
+ - ![alt text](../../mockups_imagever2.0/資料取り込み画面.png)
+ - ![alt text](../../mockups_imagever2.0/資料取り込み画面1-5.png) 
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料取り込み2・5画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料取り込み3・5画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料取り込み4・5画面.png>)
+ - ![alt text](../../mockups_imagever2.0/資料取り込み画面5・5.png)
 
 保管後画面：
-
- - ![alt text](../mockups_imagever2.0/保管庫画面.png)
+ - ![alt text](../../mockups_imagever2.0/保管庫画面.png)
 
 ルビ辞書・一覧画面：
-
- - ![alt text](../mockups_imagever2.0/ルビ辞書登録画面上画面.png)
- - ![alt text](../mockups_imagever2.0/ルビ辞書登録画面下画面.png)
- - ![alt text](../mockups_imagever2.0/ルビ辞書一覧画面.png)
+ - ![alt text](../../mockups_imagever2.0/ルビ辞書登録画面上画面.png)
+ - ![alt text](../../mockups_imagever2.0/ルビ辞書登録画面下画面.png)
+ - ![alt text](../../mockups_imagever2.0/ルビ辞書一覧画面.png)
 
 Quick Recall画面：
-
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面資料検索・一覧・編集画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面簡易メモ画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面ルビ検索・表示・登録画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面資料取り込みファイル添付画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面資料取り込み1・5画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面資料取り込み2・5画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面資料取り込み3・5画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面資料取り込み4・5画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面資料取り込み5・5画面.png>)
- - ![alt text](<../mockups_imagever2.0/Quick Recall画面保管後画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料検索・一覧・編集画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面簡易メモ画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面ルビ検索・表示・登録上画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面ルビ検索・表示・登録下画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面ルビ検索・表示・登録タイプ選択画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料取り込みファイル添付画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料取り込み1・5画面.png>)
+ - ![alt text](../../mockups_imagever2.0/資料取り込み画面2-5.png)
+ - ![alt text](../../mockups_imagever2.0/資料取り込み画面3-5.png)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料取り込み4・5画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面資料取り込み5・5画面.png>)
+ - ![alt text](<../../mockups_imagever2.0/Quick Recall画面保管後画面.png>)
 
 ## 3. 機能設計
 
@@ -117,12 +112,12 @@ Quick Recall画面：
 
 | 要件 | 現行モックの操作・状態 | 制約・残件 |
 |---|---|---|
-| FR-001/002 | 作品名・ジャンル・仮表紙を選んで作成する。作品名の空欄・重複を検査。最近開いた作品を `lastOpened` 順に最大3冊表示し、全作品を作品名検索、最近開いた順／作品名順で探せる。作品ごとの状態を退避・復元する設計。 | 作成・履歴はメモリ内。全作品0件の初期空状態はない。作品間の編集・取り込み・保管庫操作を含む通し検証は未了。 |
+| FR-001/002 | 作品名・ジャンル・仮表紙を選んで作成する。作品名の空欄・重複を検査。最近開いた作品を `lastOpened` 順に最大3冊表示し、全作品を作品名検索、最近開いた順／作品名順で探せる。作品ごとに資料・フォルダ一覧・タブ・選択状態を退避・復元する設計。 | 作成・履歴はメモリ内。全作品0件の初期空状態はない。作品間の編集・取り込み・保管庫操作を含む通し検証は未了。 |
 | FR-003 | 作品は個別に選択・作成できる。 | 別作品への資料コピー／移動は未実装。優先順位未決。 |
-| FR-004～006 | 通常資料を固定フォルダ領域とカテゴリから開く。資料には検索対象の登録済みタグがある。 | 任意階層、カテゴリの追加・編集、タグ編集、主カテゴリ変更は未実装。製品要件では主カテゴリ1つ・タグ複数。 |
+| FR-004～006 | フォルダと固定の基本カテゴリ（人物・世界観・組織・地理）の両方から通常資料を開く。資料には検索対象の登録済みタグがある。「フォルダ作成」で空のフォルダを追加でき、フォルダごとの資料件数と空状態を表示する。 | フォルダはフラットな一覧で、任意の入れ子階層、フォルダ名変更・削除、カテゴリの追加・編集、タグ編集、主カテゴリ変更は未実装。製品要件では主カテゴリ1つ・タグ複数。 |
 | FR-007/008 | 資料IDでタブを開閉し、別資料を右側に参照表示できる。区切りはポインターまたは左右キーで調整。 | 右側は参照表示。自由なパネル配置と配置の永続化はない。 |
-| FR-009/010 | 新規資料名の空欄・同名を検査。内部で資料IDを使用。 | 製品としての同名判定単位、拡張子・大小文字・全半角、複数場所からの参照方式は未決。 |
-| FR-011 | 最初の資料を資料名・カテゴリ・Markdown本文から作成できる。 | 標準Markdownテンプレートとユーザー定義テンプレートは未実装。 |
+| FR-009/010 | 資料は内部IDで管理し、通常資料の行または編集中の資料で `F2` を押すと一覧上で名前を変更できる。Enterで確定、Escapeで取り消す。一覧上の名前変更は空欄、同名、`/`・`\`・制御文字・単独の `.`／`..` を検査し、重複比較にはNFKC正規化と日本語ロケールの小文字化を使う。フォルダ作成でも同様に名前を検査する。 | モックの検査規則であり、製品としての同名判定単位、拡張子の扱い、複数場所からの参照方式は未決。名前変更に伴うMarkdownの `[[資料名]]` リンクの追従はない。 |
+| FR-011 | 新規作品では最初の資料を資料名・カテゴリ・Markdown本文から作成できる。ワークスペースでは各フォルダ／カテゴリの追加ボタンから空の資料を作り、その場で名前を入力できる。作成時の名前編集をEscapeで取り消すと、その仮資料を一覧・タブから除く。作成先のフォルダとカテゴリはボタンの位置から仮設定する。 | 一覧から作った資料とフォルダはメモリ内のみ。標準Markdownテンプレートとユーザー定義テンプレートは未実装。 |
 
 ### 3.2 取り込み・表示・出力（FR-101～FR-110）
 
@@ -160,7 +155,7 @@ Quick Recall画面：
 | FR-306/307 | `[[資料名]]` 風リンクをプレビューで表示。 | リンクの識別、改名追従、リンク切れ処理、非AI関連候補提示は未実装／要検証。 |
 | FR-308 | 自然言語検索、AIリンク・矛盾検出は将来候補。 | 初期モックにAIの入口は置かない。 |
 
-追加のモック機能として、ルビ辞書に単語・読み・投稿先を登録し、一覧・検索・削除できる。編集欄では候補をTabまたはクリックで挿入する。辞書はメモリ内、投稿先別の表記は仮例であり、正式な変換・出力ではない。
+追加のモック機能として、ルビ辞書に単語・読み・投稿先を登録し、一覧・検索・削除できる。編集欄では一致候補が1件ならTabまたはクリックで挿入し、複数件なら右クリックの候補メニューから選べる。挿入時は編集履歴にも反映する。辞書はメモリ内、投稿先別の表記は仮例であり、正式な変換・出力ではない。
 
 ### 3.5 Quick Recall（FR-401～FR-407）
 
@@ -171,6 +166,8 @@ Quick Recall画面：
 | FR-401～403/407 | 上部ボタンから約420×560のブラウザ別窓を開く。ポップアップ不可ならページ内小窓を表示。閉じる／最小化相当のボタンがある。 | OS全域ショートカット、最前面、ネイティブ最小化、常駐はない。閉じると最小化は実質同じ非表示処理。 |
 | FR-404/405 | 資料検索、概要・詳細・編集、簡易メモ、ルビ、共通取り込み、保管庫を切り替える。 | 全文表示の初期範囲、編集開始、メモ保存先は未決。メモは永続化しない。Quick Recall内の保管庫にはゴミ箱へ移す操作がない。 |
 | FR-406 | 別窓は独立したページ状態で開始する。 | メイン窓との本文・メモ同期、二重編集時の競合・保存順序は未実装／未決。 |
+
+Quick Recallの簡易メモには保存済み／未保存の表示と画面内保存があり、未保存メモを閉じる際は破棄確認を出す。`?recall=1` の別窓では、未保存の資料本文がある場合にも閉じる前に破棄確認を出す。これらはメモや本文のディスク保存・ウィンドウ間同期を意味しない。
 
 ### 3.6 初回利用・設定・テーマ（FR-501～FR-504）
 
@@ -227,6 +224,24 @@ Quick Recall画面：
 
 ## 8. 実行資産と確認の限界
 
-現行画面は `mockups/novel-lore-manager/index.html`、共通JavaScriptの `js/theme-manager.js`・`js/flows.js`・`js/enhancements.js`・`js/search.js`・`js/markdown.js`・`js/ruby.js`・`js/import-wizard.js`、共通CSSと `css/themes/` の3テーマCSSで構成される。`preview.mjs` はローカル静的プレビュー用、`tests/smoke.mjs` は検索・MarkdownのHTMLエスケープ・ルビ例・テーマ資産などの簡易確認用である。旧 `quick-recall.html`、`scripts/`、`styles/` は現行 `index.html` の機能判定に含めない。
+以下は `mockups/novel-lore-manager/index.html` を起点に、HTMLの参照とJavaScriptの静的 `import` をローカルで確認したファイル一覧である。パスはすべて同ディレクトリからの相対パス。ファイルの存在と参照関係を示すもので、各機能の動作検証結果ではない。
 
-本書は指定された2文書の内容を統合したもので、コードの追加調査や実ブラウザ試験を行った結果ではない。画面遷移全体、別窓同期、3テーマの各解像度、スクリーンリーダーでの品質は未検証として扱う。
+| 区分 | 現行 `index.html` で使用するファイル | 参照方法・役割 |
+|---|---|---|
+| 画面の入口 | `index.html` | 共通の画面構造、編集・プレビュー、Quick Recallの小窓、未保存確認ダイアログを定義する。 |
+| アイコン | `novel_lore_manager_icon.png` | `<link rel="icon">` と画面上部の `<img>` が直接参照する。 |
+| 共通CSS | `css/base.css`、`css/layout.css`、`css/components.css`、`css/flows.css`、`css/revisions.css`、`css/ver3.css`、`css/ver3-features.css` | HTMLの `<link rel="stylesheet">` で直接読み込む。基礎表示、配置、部品、画面遷移、追加調整に使う。 |
+| テーマCSS | `css/themes/forest-workbench.css`、`css/themes/storybook-atelier.css`、`css/themes/quiet-lore-studio.css` | 初期表示では Forest をHTMLから読み込み、テーマ選択時に `js/theme-manager.js` が `#theme-css` の参照先を切り替える。同時に3ファイルを重ねて読み込む構成ではない。 |
+| JavaScriptの入口 | `js/theme-manager.js` | HTMLの `<script type="module">` から読み込む。架空の6資料と画面状態、編集・保存表示、タブ、プレビュー、Quick Recall、テーマ切替を扱う。 |
+| 画面遷移・検索画面 | `js/flows.js` | `theme-manager.js` が取り込む。作品選択、資料作成、検索、保管庫などの画面と操作を組み立てる。 |
+| 追加操作 | `js/enhancements.js` | `theme-manager.js` が取り込む。パネル幅、ルビ入力補助、Quick Recall側の機能表示などを追加する。 |
+| 検索処理 | `js/search.js` | `flows.js` が取り込む。架空資料の部分一致検索と絞り込みを行う。 |
+| Markdown表示 | `js/markdown.js` | `theme-manager.js` と `enhancements.js` が取り込む。対応範囲を限定したMarkdownをプレビュー用HTMLに変換する。 |
+| ルビデータ・表記 | `js/ruby.js` | `flows.js` と `enhancements.js` が取り込む。仮のルビ辞書と投稿先向け表記を提供する。 |
+| 取り込みウィザード | `js/import-wizard.js` | `flows.js` と `enhancements.js` が取り込む。選択したファイルの名前・相対パス、またはサンプル資料だけを使い、取り込み結果を画面内で模擬する。 |
+
+読み込み関係は `index.html` → `js/theme-manager.js` → `js/flows.js`・`js/markdown.js`・`js/enhancements.js`、さらに `flows.js` → `js/search.js`・`js/ruby.js`・`js/import-wizard.js`、`enhancements.js` → `js/ruby.js`・`js/markdown.js`・`js/import-wizard.js` である。Quick Recallの別窓も現在の `index.html` に `?recall=1` を付けて開くため、別のHTMLファイルは読み込まない。
+
+`preview.mjs` はローカル静的プレビュー用、`tests/smoke.mjs` は簡易確認用であり、画面から読み込むファイルには含めない。旧 `quick-recall.html`、`scripts/`、`styles/` も現行 `index.html` の参照先ではない。HTML・CSS・JavaScriptの確認範囲では外部APIへの通信処理や外部配信の依存ファイルは見つからず、この追記作業でも外部APIには接続していない。`js/enhancements.js` の `http://www.w3.org/2000/svg` はDOMでSVG要素を作るための名前空間であり、通信先ではない。
+
+本書の機能説明は指定された2文書の内容を統合し、追加記述は現行ソースの静的確認に基づく。実ブラウザでの画面遷移全体、別窓同期、3テーマの各解像度、スクリーンリーダーでの品質は未検証として扱う。
